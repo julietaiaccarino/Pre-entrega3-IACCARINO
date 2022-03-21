@@ -2,7 +2,7 @@
 @import '../base/_lists.scss';
 @import '../base/_extends.scss';
 @import '_general';
-@import '../base/_maps.scss';
+
 
 /*inicio de estilos del header*/
 header { 
@@ -12,12 +12,12 @@ header {
                 ul {
                     li { 
                         .title {
-                            font-family: 'Bree Serif', serif;
+                            font-family: $font-header;
                             font-weight: 600 lighter;
                             font-size: 20px;
                             display: block;
                             padding: 0.5rem 1rem;
-                            color: nth($font-color, 1);
+    
                         }
                     }
                 }
@@ -26,7 +26,9 @@ header {
         }
     } 
 }
-
+// .navbarNav {
+//     justify-content: end;
+// }
 .navbar-dark .navbar-nav .nav-link {
     color: nth($font-color, 5);
  }

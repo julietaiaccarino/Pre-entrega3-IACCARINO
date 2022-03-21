@@ -1,8 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&family=Poppins:wght@300;400;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&family=Poppins:wght@300;400;500;600&display=swap");
-.margin-titles-pg, .contact-container, .margin-sectmain div div .parrafo-producto {
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap");
+.margin-titles-pg, .contact-container {
   display: flex;
   justify-content: center;
 }
@@ -28,7 +33,7 @@ a {
 
 /*fin de reseteo de estilos predeterminados*/
 body {
-  background-color: #f8f5F0;
+  background-color: #fcf7ef;
   font-family: "Poppins", sans-serif;
 }
 
@@ -40,6 +45,13 @@ img {
   display: none;
 }
 
+/* font-family: 'Lato', sans-serif;
+font-family: 'Poppins', sans-serif; */
+/* font-family: 'Bree Serif', serif; */
+/*font para encabezados en cursiva*/
+/*font-family: 'Satisfy', cursive;*/
+/*font para encabezados*/
+/*font-family: 'Old Standard TT', serif;*/
 /*inicio de estilos del header*/
 header .nav-bar {
   background-color: #181617;
@@ -50,7 +62,6 @@ header .nav-bar div div ul li .title {
   font-size: 20px;
   display: block;
   padding: 0.5rem 1rem;
-  color: #c5a75e;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -66,7 +77,7 @@ header .nav-bar div div ul li .title {
 }
 
 /*fin de estilos del header*/
-.margin-titles-pg, .contact-container, .margin-sectmain div div .parrafo-producto {
+.margin-titles-pg, .contact-container {
   display: flex;
   justify-content: center;
 }
@@ -132,7 +143,7 @@ header .nav-bar div div ul li .title {
 }
 
 /*fin de estilos del footer*/
-.margin-titles-pg, .contact-container, .margin-sectmain div div .parrafo-producto {
+.margin-titles-pg, .contact-container {
   display: flex;
   justify-content: center;
 }
@@ -142,6 +153,41 @@ header .nav-bar div div ul li .title {
   flex-wrap: wrap;
 }
 
+/*Reseteo de estilos predeterminados*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*fin de reseteo de estilos predeterminados*/
+body {
+  background-color: #fcf7ef;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.disclaimer {
+  display: none;
+}
+
+/* font-family: 'Lato', sans-serif;
+font-family: 'Poppins', sans-serif; */
+/* font-family: 'Bree Serif', serif; */
+/*font para encabezados en cursiva*/
+/*font-family: 'Satisfy', cursive;*/
+/*font para encabezados*/
+/*font-family: 'Old Standard TT', serif;*/
 /*inicio de estilo carrousel*/
 .margin-carr {
   margin-top: 135px;
@@ -152,13 +198,52 @@ header .nav-bar div div ul li .title {
 .margin-sectmain {
   margin-top: 50px;
 }
-.margin-sectmain div div .parrafo-producto {
-  font-family: "Poppins", sans-serif;
+.margin-sectmain div div .h1-tutto {
+  color: #982c3b;
+  font-family: "Old Standard TT", serif;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+.margin-sectmain div div .h2-tutto {
+  color: #982c3b;
+  font-family: "Old Standard TT", serif;
+  font-weight: bold;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+.margin-sectmain div div .h3-tutto {
+  color: #982c3b;
+  font-family: "Satisfy", cursive;
+  font-weight: 500;
+  padding: 3.5rem 1rem 2rem;
+  text-align: center;
+}
+@media screen and (min-width: 981px) {
+  .margin-sectmain div div .h3-tutto {
+    font-size: xxx-large;
+  }
+}
+.margin-sectmain div .cont-parrafo {
+  border-radius: 30px;
+  background-color: #fbedd5;
+  color: black;
+}
+.margin-sectmain div .cont-parrafo .parrafo-producto {
+  font-family: "Lato", sans-serif;
   font-style: italic;
   font-weight: bold;
   padding: 20px;
-  border: 2px solid #0e0d0d;
-  width: 90%;
+  font-size: 20px;
+  text-align: center;
+}
+@media screen and (min-width: 981px) {
+  .margin-sectmain .prod-col {
+    background-color: #fbedd5;
+    color: 0;
+    border-radius: 40px;
+    margin-top: 50px;
+  }
 }
 @media screen and (max-width: 480px) {
   .margin-sectmain .prod-col {
@@ -223,7 +308,7 @@ header .nav-bar div div ul li .title {
 }
 
 /*fin de estilo seccion productos*/
-.margin-titles-pg, .contact-container, .margin-sectmain div div .parrafo-producto {
+.margin-titles-pg, .contact-container {
   display: flex;
   justify-content: center;
 }
@@ -351,7 +436,7 @@ a {
 
 /*fin de reseteo de estilos predeterminados*/
 body {
-  background-color: #f8f5F0;
+  background-color: #fcf7ef;
   font-family: "Poppins", sans-serif;
 }
 
@@ -363,7 +448,14 @@ img {
   display: none;
 }
 
-.margin-titles-pg, .margin-sectmain div div .parrafo-producto, .contact-container {
+/* font-family: 'Lato', sans-serif;
+font-family: 'Poppins', sans-serif; */
+/* font-family: 'Bree Serif', serif; */
+/*font para encabezados en cursiva*/
+/*font-family: 'Satisfy', cursive;*/
+/*font para encabezados*/
+/*font-family: 'Old Standard TT', serif;*/
+.margin-titles-pg, .contact-container {
   display: flex;
   justify-content: center;
 }
@@ -373,7 +465,7 @@ img {
   flex-wrap: wrap;
 }
 
-.margin-titles-pg, .margin-sectmain div div .parrafo-producto, .contact-container {
+.margin-titles-pg, .contact-container {
   display: flex;
   justify-content: center;
 }
@@ -387,8 +479,7 @@ img {
 .margin-titles-pg {
   margin-top: 180px;
   color: #982c3b;
-  font-weight: 600 lighter;
-  font-size: 20px;
+  font-weight: 500;
   padding: 0.5rem 1rem;
   font-family: "Lato", sans-serif;
 }

@@ -1,6 +1,8 @@
 @import '../base/_variables.scss';
 @import '../base/_lists.scss';
 @import '../base/_extends.scss';
+@import '../base/_mixin.scss';
+@import '_general';
 
 /*inicio de estilo carrousel*/
 .margin-carr {
@@ -11,21 +13,58 @@
 /*inicio de estilo seccion productos*/
 .margin-sectmain { margin-top: 50px;
   div {
-    div {
-      .parrafo-producto{ 
-        font-family: 'Poppins', sans-serif;
-        font-style: italic;
-        font-weight: bold;
-        padding: 20px;
-        border: 2px solid rgb(14, 13, 13);
-        width: 90%;
-        @extend %center;
+    div { 
+      .h1-tutto {
+        color: map-get($h1, font-color );
+        font-family: map-get($h1, font-family );
+        font-weight: map-get($h1, font-weight );
+        padding: map-get($h1, padding );
+        text-align: map-get($h1, text-align );
+        
+      }
+      .h2-tutto {
+        color: map-get($h2, font-color );
+        font-family: map-get($h2, font-family );
+        font-weight: map-get($h2, font-weight );
+        padding: map-get($h2, padding );
+        text-align: map-get($h2, text-align );
+      }
+      .h3-tutto{
+        color: map-get($h3, font-color );
+        font-family: map-get($h3, font-family );
+        font-weight: map-get($h3, font-weight );
+        padding: map-get($h3, padding );
+        text-align: map-get($h3, text-align );
+        @media screen and (min-width:981px) {
+          font-size: xxx-large;
+        }
       }
 
     }
+    .cont-parrafo {
+      border-radius: 30px;
+      @include colors (#fbedd5, black);
+      .parrafo-producto{
+        font-family: 'Lato', sans-serif;
+        font-style: italic;
+        font-weight: bold;
+        padding: 20px;
+        font-size: 20px;
+        text-align: center;
+
+      }
+
+    }
+
   } 
 
   .prod-col { 
+    @media screen and (min-width:981px) {
+      @include colors (#fbedd5, 0);
+      border-radius: 40px;
+      margin-top: nth($margin-top, 1 );
+    }
+
     @media screen and (max-width:480px) {
       display: flex;
       flex-direction: column;
@@ -93,4 +132,9 @@
   }
 }
 
+
+// .container .row .col {
+//   @extend %center;
+
+// }
 /*fin de estilo seccion productos*/
