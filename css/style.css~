@@ -7,7 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&family=Poppins:wght@300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap");
-.margin-titles-pg, .h4-contact, .contact-container {
+.margin-titles-pg, .contact-container {
   display: flex;
   justify-content: center;
 }
@@ -53,10 +53,10 @@ font-family: 'Poppins', sans-serif; */
 /*font para encabezados*/
 /*font-family: 'Old Standard TT', serif;*/
 /*inicio de estilos del header*/
-header .black-tutto {
+header .nav-bar {
   background-color: #181617;
 }
-header .black-tutto div div ul li .title {
+header .nav-bar div div ul li .title {
   font-family: "Bree Serif", serif;
   font-weight: 600 lighter;
   font-size: 20px;
@@ -81,7 +81,7 @@ header .black-tutto div div ul li .title {
 }
 
 /*fin de estilos del header*/
-.margin-titles-pg, .h4-contact, .contact-container {
+.margin-titles-pg, .contact-container {
   display: flex;
   justify-content: center;
 }
@@ -147,7 +147,7 @@ header .black-tutto div div ul li .title {
 }
 
 /*fin de estilos del footer*/
-.margin-titles-pg, .h4-contact, .contact-container {
+.margin-titles-pg, .contact-container {
   display: flex;
   justify-content: center;
 }
@@ -312,7 +312,7 @@ font-family: 'Poppins', sans-serif; */
 }
 
 /*fin de estilo seccion productos*/
-.margin-titles-pg, .h4-contact, .contact-container {
+.margin-titles-pg, .contact-container {
   display: flex;
   justify-content: center;
 }
@@ -326,47 +326,48 @@ font-family: 'Poppins', sans-serif; */
 .contact-container {
   align-items: center;
 }
-.contact-container .contacto {
+
+.contacto {
   width: 70%;
-  margin-top: 180px;
+  margin-top: 250px;
   padding: 20px;
   display: grid;
   grid-template-columns: 12% 30% 16% 30% 12%;
-  grid-template-rows: 80px 180px 350px 280px;
-  grid-template-areas: ". titulo titulo titulo ." ". parrafo1 . parrafo2 ." ". mapa mapa mapa ." ". formulario formulario formulario . ";
+  grid-template-rows: 50px 180px 350px 280px;
+  grid-template-areas: ". . titulo . ." ". parrafo1 . parrafo2 ." ". mapa mapa mapa ." ". formulario formulario formulario . ";
   background-color: #fbedd5;
   color: black;
 }
 @media screen and (max-width: 680px) {
-  .contact-container .contacto {
+  .contacto {
     width: 100%;
-    grid-template-rows: 50px 200px 100px 350px 220px;
-    grid-template-areas: ". titulo titulo titulo ." ". parrafo1 parrafo1 parrafo1 ." ". parrafo2 parrafo2 parrafo2 ." ". mapa mapa mapa ." ". formulario formulario formulario .";
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 100px 100px 350px 220px;
+    grid-template-areas: "titulo" "parrafo1" "parrafo2" "mapa" "formulario";
   }
 }
-.contact-container .contacto .contact-title {
+
+.contact-title {
+  text-align: center;
   grid-area: titulo;
 }
-.contact-container .contacto .h1-tutto {
-  color: #982c3b;
-  font-family: "Old Standard TT", serif;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  text-align: center;
-}
-.contact-container .contacto .adress-container {
+
+.adress-container {
   grid-area: parrafo1;
   justify-self: end;
 }
-.contact-container .contacto .hours-container {
+
+.hours-container {
   grid-area: parrafo2;
   justify-self: start;
 }
-.contact-container .contacto .mapa {
+
+.mapa {
   grid-area: mapa;
   justify-self: center;
 }
-.contact-container .contacto .formulario {
+
+.formulario {
   grid-area: formulario;
 }
 
@@ -377,7 +378,7 @@ form {
   padding: 1em;
   border: 1px solid #ccc;
 }
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 480px) {
   form {
     width: 400px;
   }
@@ -458,7 +459,7 @@ font-family: 'Poppins', sans-serif; */
 /*font-family: 'Satisfy', cursive;*/
 /*font para encabezados*/
 /*font-family: 'Old Standard TT', serif;*/
-.margin-titles-pg, .contact-container, .h4-contact {
+.margin-titles-pg, .contact-container {
   display: flex;
   justify-content: center;
 }
@@ -468,7 +469,7 @@ font-family: 'Poppins', sans-serif; */
   flex-wrap: wrap;
 }
 
-.margin-titles-pg, .contact-container, .h4-contact {
+.margin-titles-pg, .contact-container {
   display: flex;
   justify-content: center;
 }
@@ -494,4 +495,4 @@ font-family: 'Poppins', sans-serif; */
   margin-top: 50px;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css~.map */

@@ -6,7 +6,7 @@
 
 /*inicio de estilos del header*/
 header { 
-    .nav-bar { background-color: #181617;
+    .black-tutto { background-color: #181617;
         div {
             div {
                 ul {
@@ -26,9 +26,10 @@ header {
         }
     } 
 }
-// .navbarNav {
-//     justify-content: end;
-// }
+
+.fixed-top {
+    width: 100%;
+}
 .navbar-dark .navbar-nav .nav-link {
     color: nth($font-color, 5);
  }

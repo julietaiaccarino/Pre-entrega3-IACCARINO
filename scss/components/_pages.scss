@@ -8,11 +8,14 @@
     margin-top: nth($margin-top, 3);
     @extend %center;
     @extend %responsive;
-    color: map-get($h1, font-color );
-    font-weight: map-get($h1, font-weight );
-    font-size: map-get($h1, font-size );
-    padding: map-get($h1, padding );
-    font-family: 'Lato', sans-serif,
+     .h1-tutto {
+        color: map-get($h1, font-color );
+        font-family: map-get($h1, font-family );
+        font-weight: map-get($h1, font-weight );
+        padding: map-get($h1, padding );
+        text-align: map-get($h1, text-align );
+        
+    }
 }
 
 .sect-margin  {

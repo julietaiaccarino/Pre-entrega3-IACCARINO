@@ -6,12 +6,14 @@
 
 /*inicio de estilo carrousel*/
 .margin-carr {
-  margin-top: 135px;
+  margin-top: nth($margin-top, 2 );
+  
 }
 /*fin de estilo carrousel*/
 
 /*inicio de estilo seccion productos*/
-.margin-sectmain { margin-top: 50px;
+.margin-sectmain { 
+  margin-top: nth($margin-top, 1 );
   div {
     div { 
       .h1-tutto {
@@ -133,8 +135,4 @@
 }
 
 
-// .container .row .col {
-//   @extend %center;
-
-// }
 /*fin de estilo seccion productos*/

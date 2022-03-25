@@ -9,69 +9,70 @@
 .contact-container {
     @extend %center;
     align-items: center;
-}
-// .table-responsive {
-// }
-
-.contacto {
-    width: 70%;
-    margin: 150px 0;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 12% 30% 16% 30% 12%;
-    grid-template-rows: 50px 100px 350px 220px;
-    grid-template-areas:
-    ". . titulo . ."
-    ". parrafo1 . parrafo2 ."
-    ". mapa mapa mapa ."
-    ". formulario formulario formulario . "
-    ;
-    @include colors (#fbedd5, black);
-
-    @media screen and (max-width:480px) {
-        width: 100%;
-        grid-template-columns: 1fr;
-        grid-template-rows: 50px 100px 100px 350px 220px;
+    .contacto {
+        width: 70%;
+        margin-top: nth($margin-top, 3 );
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 12% 30% 16% 30% 12%;
+        grid-template-rows: 80px 180px 350px 280px;
         grid-template-areas:
-        "titulo"
-        "parrafo1"
-        "parrafo2"
-        "mapa"
-        "formulario";
+        ". titulo titulo titulo ."
+        ". parrafo1 . parrafo2 ."
+        ". mapa mapa mapa ."
+        ". formulario formulario formulario . ";
+        @include colors (#fbedd5, black);
+    
+        @media screen and (max-width:680px) {
+        width: 100%;
+        grid-template-rows: 50px 200px 100px 350px 220px;
+        grid-template-areas:
+        ". titulo titulo titulo ."
+        ". parrafo1 parrafo1 parrafo1 ."
+        ". parrafo2 parrafo2 parrafo2 ."
+        ". mapa mapa mapa ."
+        ". formulario formulario formulario .";
+        }
+        .contact-title {
+            grid-area: titulo;
+        }
+        .h1-tutto {
+            color: map-get($h1, font-color );
+            font-family: map-get($h1, font-family );
+            font-weight: map-get($h1, font-weight );
+            padding: map-get($h1, padding );
+            text-align: map-get($h1, text-align );
+            
+        }
+        .adress-container {
+            grid-area: parrafo1;
+            justify-self: end;
+        }
+        .hours-container {
+            grid-area: parrafo2;
+            justify-self: start;
+        }
+        .mapa {
+            grid-area: mapa;
+            justify-self: center;
+        }
+        .formulario {
+            grid-area: formulario;
+        }
+
     }
 }
-// .table-responsive {
+.h4-contact {
+    @extend %center;
+}
 
-// }
-
-.contact-title {
-    text-align: center;
-    grid-area: titulo;
-}
-.adress-container {
-    grid-area: parrafo1;
-    justify-self: end;
-}
-.hours-container {
-    grid-area: parrafo2;
-    justify-self: start;
-}
-.mapa {
-    grid-area: mapa;
-    justify-self: center;
-}
-.formulario {
-    grid-area: formulario;
-}
-// .table-responsive {
-// }
 /*inicio de estilos del formulario*/
 form {
     margin: 0 auto;
     width: 500px;
     padding: 1em;
     border: 1px solid #ccc;
-    @media screen and (max-width:480px) {
+    @media screen and (max-width:990px) {
         width: 400px;
         }
     ul {
