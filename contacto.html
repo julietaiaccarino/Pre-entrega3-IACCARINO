@@ -74,15 +74,28 @@
       <h1 class="contact-title h1-tutto">CONTACTO</h1>
       <div class="adress-container">
         <h4 class="h4-contact">Direccion</h4>
-        <p>Concejal Tribulato 1020, B1663MWV Gran Buenos Aires, Provincia de Buenos Aires, Argentina</p>
+        <p class="contact-p">Concejal Tribulato 1020, B1663MWV Gran Buenos Aires, Provincia de Buenos Aires, Argentina</p>
       </div>
       <div class="hours-container">
         <h4 class="h4-contact">Horarios</h4>
-        <p>lunes a sabados de 9 a 19:30 hs</p>
+        <p class="contact-p">lunes a sabados de 9 a 19:30 hs</p>
       </div>
       <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.5422521051405!2d-58.71454728527506!3d-34.53982356162622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbd12e2bafa5d%3A0xb8802172a4338154!2sTUTTO%20SALUMI!5e0!3m2!1sen!2sfr!4v1642416855201!5m2!1sen!2sfr" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       <!--inicio de formulario-->
-      <form action="" class="formulario table-responsive">
+      <form action="https://formsubmit.co/julietaiaccarino@gmail.com" method="POST" class="formulario table-responsive">
+        <div class="formtutto_container">
+          <h2 class="formtutto_title">Contáctanos</h2>
+          <input type="text" class="form_input" name="name" placeholder="Nombre:">
+          <input type="email" class="form_input" name="email" placeholder="E-mail:" required>
+          <textarea class="form_input form_input_msg" name="mensaje" placeholder="Mensaje:" ></textarea>
+          <button type="submit" class="form_cta">Enviar</button>
+          <input type="hidden" name="_next" value="https://tuttosalumi.000webhostapp.com/thanks.html">
+          <input type="hidden" name="_subject" value="Nuevo mail Tutto Salumi!">
+        </div>
+      </form>
+      
+
+      <!-- <form action="" class="formulario table-responsive">
         <ul>
           <li>
             <label for="nombre">Nombre</label>
@@ -100,7 +113,7 @@
             <button type="submit">Enviar mensaje</button>
           </li>
         </ul>
-      </form>
+      </form> -->
       <!--fin de formulario-->
     </section>
   </main>

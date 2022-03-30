@@ -15,7 +15,7 @@
         padding: 20px;
         display: grid;
         grid-template-columns: 12% 30% 16% 30% 12%;
-        grid-template-rows: 80px 180px 350px 280px;
+        grid-template-rows: 80px 180px 350px 510px;
         grid-template-areas:
         ". titulo titulo titulo ."
         ". parrafo1 . parrafo2 ."
@@ -25,7 +25,7 @@
     
         @media screen and (max-width:680px) {
         width: 100%;
-        grid-template-rows: 50px 200px 100px 350px 220px;
+        grid-template-rows: 50px 200px 100px 350px 510px;
         grid-template-areas:
         ". titulo titulo titulo ."
         ". parrafo1 parrafo1 parrafo1 ."
@@ -46,11 +46,14 @@
         }
         .adress-container {
             grid-area: parrafo1;
-            justify-self: end;
+            justify-self: self-start;
         }
         .hours-container {
             grid-area: parrafo2;
-            justify-self: start;
+            justify-self: self-end;
+            @media screen and (max-width:680px) {
+                justify-self: self-start;
+            }
         }
         .mapa {
             grid-area: mapa;
@@ -58,62 +61,133 @@
         }
         .formulario {
             grid-area: formulario;
+            display: flex;
+            align-items: center;
+            justify-self: center;
         }
 
     }
 }
 .h4-contact {
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Old Standard TT', serif;
+}
+.contact-p {
+    margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;
     @extend %center;
+
 }
 
 /*inicio de estilos del formulario*/
 form {
-    margin: 0 auto;
-    width: 500px;
-    padding: 1em;
+    background-color: $form-background;
     border: 1px solid #ccc;
-    @media screen and (max-width:990px) {
-        width: 400px;
-        }
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        li {
-            margin-top: 1em;
-            @media screen and (max-width:480px) {
-                display: flex;
-                flex-direction: column;
-            }
-            label {
-                display: inline-block;
-                width: 90px;
-                text-align: right;
-            }
-            input , textarea {
-                font: 1em sans-serif;
-                width: 300px;
-                box-sizing: border-box;
-                border: 1px solid #999;
-            }
-            input:focus, textarea:focus {
-                border-color: #000;
-            }
-            textarea  {
-                vertical-align: top;
-                height: 5em;
-            }
-            button {
-                margin-left: .5em;
-            }
+    width: 90%;
+    max-width: 500px;
+    border-radius: 1em;
+    padding: 3.5em 1.5em;
+    margin: 0 auto;
+    @media screen and (max-width:450px) {
+        padding: 3.5em 1em;
+    }
 
-            
-        }
-        .button {
-            padding-left: 90px;
-        }
+}
+.formtutto_container {
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    grid-auto-columns: 100%;
+
+}
+.formtutto_title {
+    font-family: 'Satisfy', cursive;
+    color: nth($font-color, 1 );
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: .4em;
+    @media screen and (max-width:450px){
+        font-size: 2rem;
     }
 }
+.form_input {
+    font-family: inherit;
+    font-size: 1rem;   
+    padding: .8em 1em;
+    outline: none;
+    border: none;
+    border: 1px solid #bbb0b0;
+    border-radius: .2em;
+    @media screen and (max-width:450px) {
+        font-size: .8rem;
+    }
+}
+.form_input_msg {
+    resize: none;
+    padding: 1.8em 1em;
+    margin-bottom: .5em;
+}
+.form_cta {
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: nth($font-color, 5 );
+    color: nth($font-color, 3 );
+    border: none;
+    font-weight: 300;
+    padding: .7em 0;
+    border-radius: .2em;
+    cursor: pointer;
+    font-weight: 500;
+    @media screen and (max-width:450px) {
+        font-size: .8rem;
+    }
+}
+
+
+// form {
+//     margin: 0 auto;
+//     width: 500px;
+//     padding: 1em;
+//     border: 1px solid #ccc;
+//     @media screen and (max-width:990px) {
+//         width: 100%;
+//         }
+//     ul {
+//         list-style: none;
+//         padding: 0;
+//         margin: 0;
+//         li {
+//             margin-top: 1em;
+//             label {
+//                 display: inline-block;
+//                 width: 90px;
+//                 text-align: right;
+//             }
+//             input , textarea {
+//                 font: 1em sans-serif;
+//                 width: 300px;
+//                 box-sizing: border-box;
+//                 border: 1px solid #999;
+//             }
+//             input:focus, textarea:focus {
+//                 border-color: #000;
+//             }
+//             textarea  {
+//                 vertical-align: top;
+//                 height: 5em;
+//             }
+//             button {
+//                 margin-left: .5em;
+//             }
+
+            
+//         }
+//         .button {
+//             padding-left: 90px;
+//         }
+//     }
+// }
 /*fin de estilos del formulario*/
 /*fin de estilos de contacto*/
 
