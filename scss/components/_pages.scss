@@ -20,3 +20,10 @@
 .sect-margin  {
     margin-top: nth($margin-top, 1);
 }
+
+.orden-mobile {
+    @media screen and (max-width:767px) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

@@ -536,4 +536,11 @@ font-family: 'Poppins', sans-serif; */
   margin-top: 50px;
 }
 
+@media screen and (max-width: 767px) {
+  .orden-mobile {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
